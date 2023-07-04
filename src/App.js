@@ -1,11 +1,21 @@
 import React from 'react';
-import './App.css';
-import Navigation from './screens/navigationBar/navigationBar';
+import './App.scss';
+
+import { Routes, Route } from 'react-router-dom';
+
+//importing components
+
+import Layout from './components/Layout';
+
+import Particles from 'react-tsparticles';
+import { loadFull } from "tsparticles"; 
 
 function App() {
   return (
     <div className="App">
-      <Navigation />
+      <Routes>
+        <Route path = '/' element = {<Layout />  }/>
+      </Routes>    
     </div>
   );
 }
